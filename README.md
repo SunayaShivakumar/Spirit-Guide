@@ -7,7 +7,7 @@ npm install
 bower install
 grunt compass
 grunt uglify
-grunt copy
+grunt copy:html
 grunt
 ```
 
