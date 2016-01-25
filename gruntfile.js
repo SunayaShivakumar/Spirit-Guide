@@ -3,11 +3,20 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-express-server');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.initConfig({
+    copy: {
+      html: {
+        files: [
+          // includes files within path
+          {expand: true, flatten: true, src: ['source_html/*.html'], dest: 'public/', filter: 'isFile'},
+        ],
+      },
+    },
     uglify: {
       my_target: {
         files: {
-          'public/js/script.js': ['js/*.js']
+          'public/js/script.js': ['source_js/*.js']
         } //files
       } //my_target
     }, //uglify
@@ -21,15 +30,16 @@ module.exports = function(grunt) {
     watch: {
       options: { livereload: true },
       scripts: {
-        files: ['js/*.js'],
+        files: ['source_js/*.js'],
         tasks: ['uglify']
       }, //script
       sass: {
-        files: ['sass/*.scss'],
+        files: ['source_sass/*.scss'],
         tasks: ['compass:dev']
       }, //sass
       html: {
-        files: ['public/*.html']
+        files: ['source_html/*.html'],
+        tasks: ['copy:html']
       }
     }, //watch
     express: {
