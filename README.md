@@ -16,4 +16,4 @@ For MP1, you should edit the following:
 - `source_sass` folder - all sass files here will be compiled to `public/css/styles.css`
 - `js` folder - all javascript files here will be uglified and put in `public/js/script.js`
 
-**Do not edit anything under the `public` folder.** All things there are auto-generated and any changes you make will get overwritten.
+**Do not edit anything under the `public` folder.** All things there are auto-generated and any changes you make there will get overwritten.
