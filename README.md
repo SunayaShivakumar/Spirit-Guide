@@ -7,10 +7,13 @@ npm install
 bower install
 grunt compass
 grunt uglify
+grunt copy
 grunt
 ```
 
 For MP1, you should edit the following:
-- `public/index.html` - all files in the `public` folder will be served by the server
-- `sass` folder - all sass files here will be compiled to `public/css/styles.css`
+- `source_html/index.html` - all HTML files in the `source_html` folder will be copied to `public` folder and served by the server from there
+- `source_sass` folder - all sass files here will be compiled to `public/css/styles.css`
 - `js` folder - all javascript files here will be uglified and put in `public/js/script.js`
+
+**Do not edit anything under the `public` folder.** All things there are auto-generated and any changes you make will get overwritten.
