@@ -5,6 +5,8 @@ git clone https://github.com/uiuc-web-programming/mp1_starter.git
 cd mp1_starter
 npm install
 bower install
+grunt compass
+grunt uglify
 grunt
 ```
 
