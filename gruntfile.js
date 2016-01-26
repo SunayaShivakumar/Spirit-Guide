@@ -37,10 +37,10 @@ module.exports = function(grunt) {
         files: ['source_sass/*.scss'],
         tasks: ['compass:dev']
       }, //sass
-      // html: {
-      //   files: ['source_html/*.html'],
-      //   tasks: ['copy:html']
-      // }
+      html: {
+        files: ['public/*.html'],
+        // tasks: ['copy:html']
+      }
     }, //watch
     express: {
       options: {
