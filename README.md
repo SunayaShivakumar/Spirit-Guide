@@ -7,13 +7,14 @@ npm install
 bower install
 grunt compass
 grunt uglify
-grunt copy:html
-grunt
+grunt serve
+(the last three steps can be done together by just saying "grunt")
 ```
 
 For MP1, you should edit the following:
-- `source_html/index.html` - all HTML files in the `source_html` folder will be copied to `public` folder and served by the server from there
+- `public/index.html` - this html file is served by default. You are going to change this for your MP.
 - `source_sass` folder - all sass files here will be compiled to `public/css/styles.css`
 - `js` folder - all javascript files here will be uglified and put in `public/js/script.js`
+- `public/media` - all your media files (images, videos, GIFs etc. ) go here. Use relative path to access these from your HTML files.
 
-**Do not edit anything under the `public` folder.** All things there are auto-generated and any changes you make there will get overwritten.
+**Do not edit anything under the `public\css` and `public\js` folders.** All things there are auto-generated and any changes you make there will get overwritten by Grunt.
