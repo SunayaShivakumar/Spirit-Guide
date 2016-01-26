@@ -5,14 +5,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-express-server');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.initConfig({
-    copy: {
-      html: {
-        files: [
-          // includes files within path
-          {expand: true, flatten: true, src: ['source_html/*.html'], dest: 'public/', filter: 'isFile'},
-        ],
-      },
-    },
+    // copy: {
+    //   html: {
+    //     files: [
+    //       // includes files within path
+    //       {expand: true, flatten: true, src: ['source_html/*.html'], dest: 'public/', filter: 'isFile'},
+    //     ],
+    //   },
+    // },
     uglify: {
       my_target: {
         files: {
@@ -37,10 +37,10 @@ module.exports = function(grunt) {
         files: ['source_sass/*.scss'],
         tasks: ['compass:dev']
       }, //sass
-      html: {
-        files: ['source_html/*.html'],
-        tasks: ['copy:html']
-      }
+      // html: {
+      //   files: ['source_html/*.html'],
+      //   tasks: ['copy:html']
+      // }
     }, //watch
     express: {
       options: {
@@ -53,5 +53,6 @@ module.exports = function(grunt) {
       }
   }
   }) //initConfig
-  grunt.registerTask('default', ['express:dev', 'watch']);
+  grunt.registerTask('serve', ['express:dev', 'watch']);
+  grunt.registerTask('default', ['uglify', 'compass:dev', 'serve']);
 } //exports
