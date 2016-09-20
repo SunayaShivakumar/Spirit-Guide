@@ -15,7 +15,6 @@ $(document).on("scroll", function() {
 	} else {
 		$("header").removeClass("small").addClass("large");
 	}
-	scrollfunc();
 });
 
 //carousel
