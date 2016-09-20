@@ -5,6 +5,7 @@ body, html {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	background-color: $black;
 
 	header {
 		position: fixed;
@@ -127,7 +128,7 @@ body, html {
 			font-family: 'Fredericka the Great';
 			font-size: 2.5rem;
 			color: $white;
-			padding-top: 6.3%;
+			padding-top: 25px;
 			width: 100%;
 		}
 
@@ -227,7 +228,7 @@ body, html {
 
   		h2 {
 			float: right;
-			padding-top: 6.3%;
+			padding-top: 25px;
 			color: $white;
 			font-family: 'Amatica SC';
 			font-weight: bold;
@@ -332,7 +333,7 @@ body, html {
 
 		h2 {
 			float: right;
-			padding-top: 6.3%;
+			padding-top: 25px;
 			color: $white;
 			font-family: 'Amatica SC';
 			font-weight: bold;
